@@ -2,8 +2,10 @@
 #include <iomanip>
 using namespace std;
 
-int getinput(int &a, int &b);
-int swapTwoValues(float &a, float &b);
+void getinput(int &a, int &b);
+void swapTwoValues(int &a, int &b);
+void getinput(float &a, float &b);
+void swapTwoValues(float &a, float &b);
 
 int main()
 {
@@ -21,12 +23,24 @@ int main()
 	cout << setw(5) << fnum1 << setw(5) << fnum2 << setw(5) << endl;
 }
 
-int getinput(int &a, int &b) {
+void getinput(int &a, int &b) {
 	cout << "Enter two integers: ";
 	cin >> a >> b;
 }
 
-int swapTwoValues(float &a, float &b) {
+void swapTwoValues(int &a, int &b) {
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+void getinput(float &a, float &b) {
+	cout << "Enter two floats: ";
+	cin >> a >> b;
+}
+
+void swapTwoValues(float &a, float &b) {
 	float temp;
 	temp = a;
 	a = b;
