@@ -2,9 +2,8 @@
 #include <iomanip>
 using namespace std;
 
-//********************
-// Declare Function Prototypes
-//********************
+int getinput(int &a, int &b);
+int swapTwoValues(float &a, float &b);
 
 int main()
 {
@@ -22,6 +21,14 @@ int main()
 	cout << setw(5) << fnum1 << setw(5) << fnum2 << setw(5) << endl;
 }
 
-// ******************************
-// Implement all your functions here
-// ******************************
+int getinput(int &a, int &b) {
+	cout << "Enter two integers: ";
+	cin >> a >> b;
+}
+
+int swapTwoValues(float &a, float &b) {
+	float temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
